@@ -1,0 +1,38 @@
+<html>
+
+<body>
+    <script>
+        // function getEveryCharacter(str) {
+        //     var character;
+        //     for (i = 0; i < str.length; i++) {
+        //         character = str[i];
+        //         var result = printFirstRepeatingCharacter(character, str);
+        //     }
+        // }
+
+        // function printFirstRepeatingCharacter(character, str) {
+        //     for (i = 0; i < str.length; i++) {
+        //         if (str[i] == character) {
+        //             console.log(character);
+        //         }
+        //     }
+        // }
+
+        // getEveryCharacter(str);
+
+        var numbers4 = "meghna";
+        function getDuplicate(numbers4) {
+            for (var a = 0; a < numbers4.length; a++) {
+                for (var b = a + 1; b < numbers4.length; b++) {
+                    if (numbers4[a] === numbers4[b]) {
+                        return a;
+                    }
+                }
+            }
+        }
+        console.log(getDuplicate(numbers4));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!-- Write a program that asks the user for a number n and prints the sum of the numbers 1 to n 
+only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17 -->
+
+<html>
+
+<head>
+    <script>
+        function printMultiplesOfThreeOrFive() {
+            var num = parseInt(prompt("Give any number?"));
+
+            for (i = 1; i <= num; i++) {
+                if (i % 3 == 0 || i % 5 == 0) {
+                    document.write(i + "<br>");
+                }
+            }
+        }
+
+        printMultiplesOfThreeOrFive();
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,25 @@
+<!-- Write a program that asks the user for a number n and gives them the possibility to choose between 
+computing the sum and computing the product of 1,…,n. -->
+
+<html>
+
+<head>
+    <script>
+        function findSumAndProduct() {
+            var num = parseInt(prompt("Give any number?"));
+            var typeOfOperation = prompt("+ or *");
+
+            for (i = 1; i <= num; i++) {
+                var total = 0
+                if (typeOfOperation == "+") {
+                    total = total + i
+                    console.log(total);
+                }
+            }
+        }
+
+        findSumAndProduct();
+    </script>
+</head>
+
+</html>
