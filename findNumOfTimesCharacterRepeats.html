@@ -1,0 +1,33 @@
+<!-- given a string 'elephant', find the no. of times a character is repeated ==> 
+ {'e' -> 2, 'l' -> 1, 'p' -> 1, 'h' ->1, 'n' -> 1, 't' -> 1 } 
+-->
+
+
+<html>
+
+<head>
+    <script>
+        var myString = "elephant";
+        var result = {};
+
+        function getCharacterCount(el, str) {
+            var c = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == el) {
+                    c = c + 1;
+                }
+            }
+            return c;
+        }
+
+        for (var i = 0; i < myString.length; i++) { // 1
+            var ch = myString[i]
+            var count = getCharacterCount(ch, myString);
+            result[ch] = count;
+        }
+
+        console.log('Here', result);
+    </script>
+</head>
+
+</html>
