@@ -1,0 +1,44 @@
+<!-- Find First Non-repeating Element 
+1. loop over the string to pick every character 
+2. make another sub-loop to iterate over the complete string 
+3. compare the character received in step 1 with other characters of the substring, one-by-one
+from current position to last, by incrementing a variable 'count'
+4. if element == other element, increase the count
+5. if count < 2, return non-repeating character 
+6. break the loop -->
+
+<html>
+
+<body>
+    <script>
+        function printFirstNonRepeatingElement(str) {
+            var character;
+            var result;
+            for (var i = 0; i < str.length; i++) {
+                character = str[i];
+                result = findFirstNonRepeatingElement(character, str);
+                if (result != undefined) {
+                    break;
+                }
+            }
+            console.log(result);
+        }
+
+        function findFirstNonRepeatingElement(ch, str) {
+            var count = 0;
+            for (var j = 0; j < str.length; j++) {
+                if (ch == str[j]) {
+                    count = count + 1;
+                }
+            }
+            if (count < 2) {
+                return ch;
+            }
+        }
+
+        printFirstNonRepeatingElement("assyas");
+
+    </script>
+</body>
+
+</html>

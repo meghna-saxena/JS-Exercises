@@ -2,35 +2,36 @@
 
 <body>
     <script>
-        // function getEveryCharacter(str) {
-        //     var character;
-        //     for (i = 0; i < str.length; i++) {
-        //         character = str[i];
-        //         var result = printFirstRepeatingCharacter(character, str);
-        //     }
-        // }
+        //Find First Repeating Element
+        // 1. loop over the string
+        // 2. pick each character of the string
+        // 3. make another sub-loop to iterate over the complete string
+        // 4. compare the element received in step 2 with other elements of the substring, one-by-one from current position to last
+        // 5. if element == other element, return repeating character
+        // 6. break the loop
 
-        // function printFirstRepeatingCharacter(character, str) {
-        //     for (i = 0; i < str.length; i++) {
-        //         if (str[i] == character) {
-        //             console.log(character);
-        //         }
-        //     }
-        // }
+        function printFirstRepeatingElement(str) {
+            var character;
+            var result;
+            for (var i = 0; i < str.length; i++) { //step 1
+                character = str[i]; // step 2
+                result = findFirstRepeatingElement(character, str.substring(i + 1))
+                if (result != undefined) {
+                    break;
+                }
+            }
+            console.log(result);
+        }
 
-        // getEveryCharacter(str);
-
-        var numbers4 = "meghna";
-        function getDuplicate(numbers4) {
-            for (var a = 0; a < numbers4.length; a++) {
-                for (var b = a + 1; b < numbers4.length; b++) {
-                    if (numbers4[a] === numbers4[b]) {
-                        return a;
-                    }
+        function findFirstRepeatingElement(ch, str) {
+            for (var j = 0; j < str.length; j++) {
+                if (str[j] == ch) {
+                    return str[j]
                 }
             }
         }
-        console.log(getDuplicate(numbers4));
+
+        printFirstRepeatingElement("dinosaurs")
 
     </script>
 </body>
