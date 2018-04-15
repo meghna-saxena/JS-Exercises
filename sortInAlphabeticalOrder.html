@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <script>
+        var str = 'aABCabcijH';
+        var newStr = str.split('');
+        
+        var result = newStr.sort((a, b) => { 
+            var x = a.toUpperCase(); 
+            var y = b.toUpperCase(); 
+            return x.charCodeAt() - y.charCodeAt(); 
+        });
+
+        console.log(result.join());
+    </script>
+</head>
+
+</html>
