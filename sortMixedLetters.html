@@ -3,9 +3,13 @@
 <head>
     <script>
         var arr = ["A", "F", "e", "H", "l", "N", "R", "E"];
-        var result = arr.sort();
+
+        var newresult = arr.sort(function (a, b) {
+            return a.charCodeAt() - b.charCodeAt();
+        });
         
-        console.log(result);
+        
+        console.log(newresult);
     </script>
 </head>
 
