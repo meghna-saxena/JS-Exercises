@@ -1,0 +1,26 @@
+<!-- Given a list of employees and their salaries, find the employee with highest salary -->
+
+<html>
+
+<head>
+    <script>
+        var employees = [
+            { name: 'A', salary: 5000 },
+            { name: 'B', salary: 7500 },
+            { name: 'X', salary: 3000 }
+        ];
+
+        // sort by salary
+        function findHighestSalary(employees) {
+            var result = employees.sort(function (a, b) {
+                return b.salary - a.salary;
+            });
+            console.log(result[0]);
+            // console.log(result[0].salary); //for getting highest salary
+        }
+
+        findHighestSalary(employees);
+    </script>
+</head>
+
+</html>
