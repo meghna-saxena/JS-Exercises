@@ -1,0 +1,46 @@
+<!-- Write a function that computes the running total of a list.
+Example: var myarray = [5, 10, 3, 2];
+        Output = [5, 15, 18, 20]
+-->
+
+<html>
+
+<head>
+    <script>
+        // ================================
+        // Using for/in loop => 
+        // ================================
+
+
+        //         function myFunction() {
+        //             var person = { fname: "John", lname: "Doe", age: 25 };
+
+        //             var text = "";
+        //             var x;
+        //             for (x in person) {
+        //                 text += person[x] + " ";
+        //             }
+        //             console.log(text);
+        //         }
+
+        //         myFunction();
+
+        var myArray = [5, 10, 3, 2];
+
+        function computeTotalOfList() {
+            var output = [];
+            var sum = 0;
+
+            for (var i in myArray) {
+                sum = sum + myArray[i];
+                output.push(sum)
+            }
+            console.log(output)
+        }
+
+        computeTotalOfList(); // returns [5, 15, 18, 20]
+
+    </script>
+</head>
+
+</html>

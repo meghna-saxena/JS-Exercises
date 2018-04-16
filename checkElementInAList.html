@@ -1,0 +1,21 @@
+<!-- Write a function that checks whether an element occurs in a list. -->
+
+<html>
+<head>
+    <script>
+        var arr = [1, 4, 7, 8, 2, 0]
+        var userInput = parseInt(prompt("Enter a random number between 0-9 to try your luck?"));
+
+        function checkUserInput(arr, userInput) {
+            for (i = 0; i < arr.length; i++) {
+                if (userInput == arr[i]) {
+                    console.log("Correct number")
+                }
+                // } else console.log("Sorry, your input is wrong!"); 
+            }
+        }
+
+        checkUserInput(arr, userInput);
+    </script>
+</head>
+</html>
