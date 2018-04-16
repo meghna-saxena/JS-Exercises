@@ -1,0 +1,26 @@
+<!-- Write a program which returns the longest word from the sentence -->
+
+<html>
+
+<head>
+    <script>
+        function findLongestWord(myString) {
+            var str = myString.split(' ');
+            var longest = 0;
+            var word;
+
+            for (var i = 0; i < str.length; i++) {
+                if (longest < str[i].length) {
+                    longest = str[i].length;
+                    word = str[i]
+                }
+            }
+            console.log(word);
+
+        }
+
+        findLongestWord("I am learning javascript");
+    </script>
+</head>
+
+</html>
