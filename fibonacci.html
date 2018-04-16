@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        var prev = 0;
+        var current = 1;
+        var next;
+
+        function findFibonacci(num) {
+            console.log("0 ->",prev);
+            console.log("1 ->",current);
+
+            for (i = 2; i < num; i++) {
+                next = prev + current;
+                console.log(i + " ->", next);
+                prev = current;
+                current = next;
+            }
+        }
+
+        findFibonacci(10);
+    </script>
+</head>
+
+</html>
