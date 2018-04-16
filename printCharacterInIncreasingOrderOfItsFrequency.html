@@ -1,0 +1,52 @@
+<!-- 
+    Rearrange a string in increasing order of the frequency of its characters -
+    Eg: string = "elephant"
+    Output = "ahlnptee"
+-->
+
+<html>
+
+<head>
+    <script>
+        function findSolutionAndPrintResult(myString) {
+            var charFrequencMap = {};
+            for (var i = 0; i < myString.length; i++) {
+                var character = myString[i]
+                var count = findCharacterCount(character, myString);
+                charFrequencMap[character] = count;
+            }
+
+            var entries = Object.entries(charFrequencMap);
+            var sortedEntries = entries.sort(function (a, b) {
+                return a[1] - b[1];
+            });
+            // console.log(sortedEntries[0]);
+
+            var charNumberOfTime = sortedEntries.map(e => printCharNumberOfTimes(e[0], e[1]));
+
+            console.log(charNumberOfTime.join(''));
+        }
+
+        function printCharNumberOfTimes(ch, num) {
+            var result = "";
+            for (i = 0; i < num; i++) {
+                result = result + ch;
+            }
+            return result;
+        }
+
+        function findCharacterCount(ch, str) {
+            var count = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == ch) {
+                    count = count + 1;
+                }
+            }
+            return count;
+        }
+
+        findSolutionAndPrintResult("ddcbbaaa") // cbbddaaa
+    </script>
+</head>
+
+</html>
