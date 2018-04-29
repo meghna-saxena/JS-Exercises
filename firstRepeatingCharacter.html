@@ -9,30 +9,57 @@
         // 4. compare the element received in step 2 with other elements of the substring, one-by-one from current position to last
         // 5. if element == other element, return repeating character
         // 6. break the loop
+        // <!-- 
 
-        function printFirstRepeatingElement(str) {
-            var character;
-            var result;
-            for (var i = 0; i < str.length; i++) { //step 1
-                character = str[i]; // step 2
-                result = findFirstRepeatingElement(character, str.substring(i + 1))
-                if (result != undefined) {
-                    break;
+        // complexity = O(n^2) -->
+        // ============================================
+
+
+        //         function printFirstRepeatingElement(str) {
+        //             var character;
+        //             var result;
+        //             for (var i = 0; i < str.length; i++) { //step 1
+        //                 character = str[i]; // step 2
+        //                 result = findFirstRepeatingElement(character, str.substring(i + 1))
+        //                 if (result != undefined) {
+        //                     break;
+        //                 }
+        //             }
+        //             console.log(result);
+        //         }
+
+        //         function findFirstRepeatingElement(ch, str) {
+        //             for (var j = 0; j < str.length; j++) {
+        //                 if (str[j] == ch) {
+        //                     return str[j]
+        //                 }
+        //             }
+        //         }
+
+        //         printFirstRepeatingElement("dinosaurs") 
+
+
+
+        // ==============================================
+        // Complexity O(n)
+        // ==============================================
+
+
+        var str = "hello";
+        function tatti(input) {
+            var result = {};
+
+            for (var i = 0; i < str.length; i++) {
+                var ch = str[i];
+                if (result[ch] == undefined) {
+                    result[ch] = 1
+                } else {
+                    result[ch] = result[ch] + 1
+                    return console.log(ch);
                 }
             }
-            console.log(result);
         }
-
-        function findFirstRepeatingElement(ch, str) {
-            for (var j = 0; j < str.length; j++) {
-                if (str[j] == ch) {
-                    return str[j]
-                }
-            }
-        }
-
-        printFirstRepeatingElement("dinosaurs")
-
+        tatti(str);
     </script>
 </body>
 

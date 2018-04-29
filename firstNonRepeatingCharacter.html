@@ -11,32 +11,57 @@ from current position to last, by incrementing a variable 'count'
 
 <body>
     <script>
-        function printFirstNonRepeatingElement(str) {
-            var character;
-            var result;
-            for (var i = 0; i < str.length; i++) {
-                character = str[i];
-                result = findFirstNonRepeatingElement(character, str);
-                if (result != undefined) {
-                    break;
-                }
-            }
-            console.log(result);
-        }
+                
+// ================================================================================================
+        // complexity = O(n^2)
+// ================================================================================================
 
-        function findFirstNonRepeatingElement(ch, str) {
-            var count = 0;
-            for (var j = 0; j < str.length; j++) {
-                if (ch == str[j]) {
-                    count = count + 1;
-                }
-            }
-            if (count < 2) {
-                return ch;
+        // function printFirstNonRepeatingElement(str) {
+        //     var character;
+        //     var result;
+        //     for (var i = 0; i < str.length; i++) {
+        //         character = str[i];
+        //         result = findFirstNonRepeatingElement(character, str);
+        //         if (result != undefined) {
+        //             break;
+        //         }
+        //     }
+        //     console.log(result);
+        // }
+
+        // function findFirstNonRepeatingElement(ch, str) {
+        //     var count = 0;
+        //     for (var j = 0; j < str.length; j++) {
+        //         if (ch == str[j]) {
+        //             count = count + 1;
+        //         }
+        //     }
+        //     if (count < 2) {
+        //         return ch;
+        //     }
+        // }
+
+        // printFirstNonRepeatingElement("asyskl"); 
+        
+
+// ================================================================================================
+        // complexity = O(n)
+// ================================================================================================
+
+        var str = "hello";
+        var result = {};
+
+        for (var i = 0; i < str.length; i++) {
+            var ch = str[i];
+            if (result[ch] == undefined) {
+                result[ch] = 1
+            } else {
+                result[ch] = result[ch] + 1
             }
         }
-
-        printFirstNonRepeatingElement("assyas");
+        if (result[ch] < 2) {
+            console.log(ch);
+        }
 
     </script>
 </body>

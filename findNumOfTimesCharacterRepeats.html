@@ -7,26 +7,49 @@
 
 <head>
     <script>
-        var myString = "elephant";
-        var result = {};
+        // ===================================================================================
+         // complexity = O(n^2)
+        // ===================================================================================
+        
+        // var myString = "elephant";
+        // var result = {};
 
-        function getCharacterCount(el, str) {
-            var c = 0;
-            for (var i = 0; i < str.length; i++) {
-                if (str[i] == el) {
-                    c = c + 1;
-                }
-            }
-            return c;
-        }
+        // function getCharacterCount(el, str) {
+        //     var c = 0;
+        //     for (var i = 0; i < str.length; i++) {
+        //         if (str[i] == el) {
+        //             c = c + 1;
+        //         }
+        //     }
+        //     return c;
+        // }
 
-        for (var i = 0; i < myString.length; i++) { // 1
-            var ch = myString[i]
-            var count = getCharacterCount(ch, myString);
-            result[ch] = count;
-        }
+        // for (var i = 0; i < myString.length; i++) { // 1
+        //     var ch = myString[i]
+        //     var count = getCharacterCount(ch, myString);
+        //     result[ch] = count;
+        // }
 
-        console.log('Here', result);
+        // console.log('Here', result);
+
+// <!-- 
+// =======================================================================================================
+//             Complexity O(n)
+//  ======================================================================================================       -->
+   
+   var str = "mississipi";
+   var result = {};
+
+   for (var i =0; i<str.length; i++) {
+       var ch = str[i];
+       if (result[ch] == undefined) {
+           result[ch] = 1
+       } else {
+           result[ch] = result[ch] + 1
+       }
+   }
+
+   console.log(result);
     </script>
 </head>
 
