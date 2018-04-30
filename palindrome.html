@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script>
+        function palindrome(str) {
+            var arr = str.replace(/[^a-zA-Z]/g, '').toLowerCase().split('');
+            console.log(arr);
+            var newArr = [];
+
+            for (i = arr.length - 1; i >= 0; i--) {
+                newArr.push(arr[i]);
+            }
+            //    console.log(newArr);
+            if (arr.join() != newArr.join()) {
+                return false
+            }
+            return true
+        }
+
+        if (palindrome("RaceCar")) {
+            console.log("Yay")
+        } else {
+            console.log("Nay")
+        }
+
+    </script>
+</head>
+
+</html>
